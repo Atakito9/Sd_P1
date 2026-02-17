@@ -1,0 +1,8 @@
+services:
+  notebook:
+    image: quay.io/jupyter/pyspark-notebook
+    restart: on-failure
+    command: start-notebook.py --IdentityProvider.token=''
+    ports:
+      - 8888:8888
+
