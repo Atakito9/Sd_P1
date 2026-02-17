@@ -10,3 +10,30 @@ Apache Spark es un framework de código abierto para computación distribuida. S
 Spark se puede además integrar con sistemas de gestión de cluster, como Apache Mesos, o usar su propio sistema de cluster nativo.
 
 En esta práctica instalaremos Spark y crearemos trabajos que mandaremos al sistema distribuido usando el API para Python (PySpark).
+
+Usaremos el workshop de Jupyter para calcular datos meteorologicos desde un CSV
+
+## TO-DO
+- [x] Javascript y Conexion a Jupyter con spark
+- [ ] Ejercicio 0 - Convertir lista CSV a Texto legible con ;
+    - [ ] Revisar codigo de Ej0.ipynb
+- [ ] Ejercicio 1 -
+
+`docker compose up` <- Iniciar spark y conectarse al servidor de localhost
+RECUERDA, haz un git clone del repositorio dentro de Jupyter para que funcionen los comandos de spark.
+
+```javascript
+from pyspark import SparkContext
+
+# Inicialización del Contexto dentro de Jupyter
+sc = SparkContext("local[*]", "Sd_P1")
+file_name = "calidad_aire_datos_meteo_mes.csv"
+
+# Constantes
+MAG_TEMP = 83  # Magnitud Temperatura 
+MAG_PREC = 89  # Magnitud Precipitación 
+FLAG_VALID = 'V' # Bandera de validación [cite: 81]
+
+# Cargar archivo dentro de Jupyter
+raw_rdd = sc.textFile(f"file:///home/jovyan/Sd_P1/{file_name}")
+```
