@@ -15,25 +15,57 @@ Usaremos el workshop de Jupyter para calcular datos meteorologicos desde un CSV
 
 ## TO-DO
 - [x] Javascript y Conexion a Jupyter con spark
+    - [x] docker compose up & apt install spark
 - [ ] Ejercicio 0 - Convertir lista CSV a Texto legible con ;
-    - [ ] Revisar codigo de Ej0.ipynb
-- [ ] Ejercicio 1 -
+    - [x] Revisar codigo de Ej0.ipynb
+    - [ ] Crear Ej_final.ipynb con los cambios necesarios (1 bucle for y ningun def)
+- [ ] Ejercicio 1 - Separar datos dentro de el CSV
+    - [x] Hallar todos los datos y separar por valido e invalido
+    - [ ] NEW!: Eliminar el conjunto de hilos(def) por otro tipo de estructura
+- [ ] Ejercicio 2 - Calcular la temperatura maxima valida
+    - [x] A partir de la tupla hallamos las temperaturas maximas y lo ordenamos
+    - [ ] NEW!: Eliminar el bucle for para imprimir por otra estructura
+- [ ] Ejercicio 3 - Calcular las estaciones con mayor precipitacion
+    - [x] Usar la tupla otra vez para reducir e ordenar
+    - [ ] NEW!: Eliminar el bucle for para imprimir por otra estructura
+- [ ] Ejercicio 4 - Comparar valores de dos estaciones concretas
+    - [ ] Hallar valor medio de las temperaturas
+    - [ ] Calcular el porcentaje
+    - [ ] NEW! Cambiar el def para calcular el valor medio
+    - [ ] NEW! Eliminar el bucle for para imprimir
+- [ ] Adaptar todo el codigo a los cambios
 
-`docker compose up` <- Iniciar spark y conectarse al servidor de localhost
+⚠︎ El proyecto usa librerias de spark, usa `sudo apt install spark` para poder usar
+
+## Preparacion
+
+Para conectarse a Jupyter Notebook creamos una carpeta spark y ponemos este codigo
+```yml
+services:
+  notebook:
+    image: quay.io/jupyter/pyspark-notebook
+    restart: on-failure
+    command: start-notebook.py --IdentityProvider.token=''
+    ports:
+      - 8888:8888
+```
+Esto servira para lanzar un puente para conectarse a Jupyter, en la carpeta donde esta este archivo lanzamos una terminal y ejecutamos el archivo:
+`docker compose up` <- Iniciar spark y conectarse al servidor de localhost a partir de este link - https://localhost:8888/lab
+
 RECUERDA, haz un git clone del repositorio dentro de Jupyter para que funcionen los comandos de spark.
 
-```javascript
-from pyspark import SparkContext
+## Ejercicio 1
 
-# Inicialización del Contexto dentro de Jupyter
-sc = SparkContext("local[*]", "Sd_P1")
+```python
+# Inicialización del Contexto
+sc = SparkContext.getOrCreate()
 file_name = "calidad_aire_datos_meteo_mes.csv"
 
 # Constantes
-MAG_TEMP = 83  # Magnitud Temperatura 
-MAG_PREC = 89  # Magnitud Precipitación 
-FLAG_VALID = 'V' # Bandera de validación [cite: 81]
+MAG_TEMP = 83
+MAG_PREC = 89
+FLAG_VALID = 'V'
 
-# Cargar archivo dentro de Jupyter
-raw_rdd = sc.textFile(f"file:///home/jovyan/Sd_P1/{file_name}")
+# Carga del archivo que esta dentro de jupyter
+raw_rdd = sc.textFile(f"Sd_P1/{file_name}")
 ```
