@@ -1,7 +1,7 @@
 # Sd_P1
 ### Practica 1
 
-![](https://img.shields.io/badge/version-v0.alph-blue)
+![](https://img.shields.io/badge/version-v1.0-blue)
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Apache_Software_Foundation_Logo_%282016%29.svg/960px-Apache_Software_Foundation_Logo_%282016%29.svg.png?20160227223120)
 
