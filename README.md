@@ -1,9 +1,9 @@
 # Sd_P1
 ### Practica 1
 
-![](https://img.shields.io/badge/version-v1.2_test2-blue)
+![](https://img.shields.io/badge/version-v1.2_test3-blue)
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/1920px-Jupyter_logo.svg.png)
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/960px-Jupyter_logo.svg.png)
 
 Apache Spark es un framework de código abierto para computación distribuida. Spark suele instalarse en un cluster, y puede interactuar con diversos sistemas distribuidos, como HDFS (Hadoop Distributed File System), o sistemas similares, como Amazon S3.
 
@@ -13,18 +13,11 @@ En esta práctica instalaremos Spark y crearemos trabajos que mandaremos al sist
 
 Usaremos el workshop de Jupyter para calcular datos meteorologicos desde un CSV
 
-
-## **Contenido de la practica**
-
-[TOCM]
-
-[TOC]
-
 ## Versiones del codigo - Estable v1.2
 Existen dos versiones del codigo actualmente: Ej0 y Ej1.
 La version final, sin hilos y sin bucles for es el codigo Ej1.ipynb
 
-[Link Ej1.ipynb](https://github.com/Atakito9/Sd_P1/main/Ej1.ipynb "Link Ej1.ipynb")
+[Link Ej1.ipynb](https://github.com/Atakito9/Sd_P1/blob/main/Ej1.ipynb "Link Ej1.ipynb")
 
 ## TO-DO
 - [x] Javascript y Conexion a Jupyter con spark
