@@ -1,9 +1,9 @@
 # Sd_P1
 ### Practica 1
 
-![](https://img.shields.io/badge/version-v1.2_test3-blue)
+![](https://img.shields.io/badge/version-v1.2_test2-blue)
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/960px-Jupyter_logo.svg.png)
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/500px-Jupyter_logo.svg.png)
 
 Apache Spark es un framework de código abierto para computación distribuida. Spark suele instalarse en un cluster, y puede interactuar con diversos sistemas distribuidos, como HDFS (Hadoop Distributed File System), o sistemas similares, como Amazon S3.
 
