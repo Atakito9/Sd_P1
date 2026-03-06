@@ -75,3 +75,25 @@ FLAG_VALID = 'V'
 # Carga del archivo que esta dentro de jupyter
 raw_rdd = sc.textFile(f"Sd_P1/{file_name}")
 ```
+En este ejercicio se utilizará spark para cargar los datos meteorológicos de la Comunidad de Madrid y hacer diferentes análisis sobre estos usando RDDs.
+
+En el primer apartado se contará cuantos registros diarios de temperatura(magnitud 83) presentan al menos una hora con dato válido.
+
+
+Descripción del código
+
+En el segundo apartado se calculará para cada día disponible del fichero la temperatura máxima horaria válida registrada considerando únicamente los valores de magnitud de Temperatura(83). Descartando aquellas horas
+cuyo campo de validación no sea "V". (Mostrando los valores en formato YYYY-MM-DD, y la temperatura máxima diaria correspondiente)
+
+Descripción del código
+
+En el tercer apartado se calcula para cada día disponible en el fichero, la estación con mayor precipitación total registrada en la Comunidad de Madrid considerando únicamente los
+valores correspondientes a la magnitud Precipitación (89) y sumando exclusivamente
+aquellas horas cuyo campo de validación sea "V". (En el resultado se mostrará la fecha, el municipio, la estación y la precipitación total diaria correspondiente). También se ha de determinar el mayor valor de precipitación diaria observado en todo el periodo analizado, indicando la fecha, el municipio y la estación en la que se produjo (En caso de empate entre varias estaciones, se seleccionará cualquiera de ellas)
+
+Descripción del código
+
+En el cuarto apartado se compara los valores de temperatura media diaria
+(magnitud 83) registrados en dos estaciones concretas de la Comunidad de Madrid: municipio 6, estación 4 y municipio 5, estación 2. Muestra los resultados como un porcentaje del valor de la estación de referencia (municipio 6, estación 4), de modo que el porcentaje sea 100 si son iguales, 50 si la segunda estación tiene la mitad, 200 si tiene el doble, etc (En el resultado se  mostrará la fecha en formato YYYY-MM-DD y el porcentaje correspondiente)
+
+Descripción del código
