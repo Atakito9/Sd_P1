@@ -169,6 +169,7 @@ Ej 1 - Total registros de temperatura válidos: 224
 Ej 3B - Máx Absoluto Precipitación -> Fecha: 2026-02-05 | Muni: 115 | Est: 3 | Total: 30.8 mm
 
 FECHA        | T_MAX (Ej 2)    | PRECIP MAX (Ej 3A) [Muni, Est, mm]   | COMPARATIVA (Ej 4)
+
 2026-02-01   | 11.7            | ('120', '1', 20.8)                   | 129.04%           
 2026-02-02   | 12.2            | ('161', '1', 18.4)                   | 113.45%           
 2026-02-03   | 9.8             | ('127', '4', 7.6)                    | 114.98%           
