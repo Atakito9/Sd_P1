@@ -42,10 +42,10 @@ La version final, sin hilos y sin bucles for es el codigo Ej1.ipynb
 - [x] Adaptar todo el codigo a los cambios
 
 ⚠︎ El proyecto usa librerias de spark, usa `sudo apt install spark` para poder usar
+⚠︎ Si se quiere usar en VSC descarga git para poder clonar este repositorio mas facilmente `sudo apt install git`
 
 ## Preparacion
-
-Para conectarse a Jupyter Notebook creamos una carpeta spark y ponemos este codigo
+Para conectarse a Jupyter Notebook se crea una carpeta spark y se añade un archivo compose.yml con este codigo
 ```yml
 services:
   notebook:
@@ -55,7 +55,7 @@ services:
     ports:
       - 8888:8888
 ```
-Esto servira para lanzar un puente para conectarse a Jupyter, en la carpeta donde esta este archivo lanzamos una terminal y ejecutamos el archivo:
+Esto servira para lanzar un puente para conectarse a Jupyter, en la carpeta donde esta este archivo. Se lanza una terminal y se ejecuta el archivo:
 `docker compose up` <- Iniciar spark y conectarse al servidor de localhost a partir de este link - https://localhost:8888/lab
 
 RECUERDA, haz un git clone del repositorio dentro de Jupyter para que funcionen los comandos de spark.
@@ -106,7 +106,9 @@ parse_lambda = lambda line: (
 data_rdd = safe_raw_rdd.map(parse_lambda)
 ```
 
-### Ejercicio 1
+
+### **⚠︎ RESULTADOS FINALES ESTAN EN EL APARTADO " Resultados al ejecutar el codigo"**
+## Ejercicio 1
 En el primer apartado se cargan los datos meteorológicos de la Comunidad de Madrid y hacer diferentes análisis sobre estos usando RDDs. Se cuentan cuantos registros diarios de temperatura(magnitud 83) que presentan al menos una hora con dato válido.
 ##### Codigo
 ```python
@@ -178,3 +180,6 @@ FECHA        | T_MAX (Ej 2)    | PRECIP MAX (Ej 3A) [Muni, Est, mm]   | COMPARAT
 2026-02-06   | 10.3            | ('67', '1', 6.3)                     | 116.52%           
 2026-02-07   | 9.0             | ('115', '3', 21.8)                   | 131.91%           
 2026-02-08   | 12.7            | ('120', '1', 25.1)                   | 116.34%           
+
+## Problemas encotrados
+El unico problema encontrado al realizar este codigo fue quitar todos los defs y fors que tenia la primera version ya que no se podian usar, pero volver a reescribir el codigo no fue tan complejo como parecia. Por lo demas no hubo ningun problema mayor.
