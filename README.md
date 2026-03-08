@@ -42,6 +42,7 @@ La version final, sin hilos y sin bucles for es el codigo Ej1.ipynb
 - [x] Adaptar todo el codigo a los cambios
 
 ⚠︎ El proyecto usa librerias de spark, usa `sudo apt install spark` para poder usar
+
 ⚠︎ Si se quiere usar en VSC descarga git para poder clonar este repositorio mas facilmente `sudo apt install git`
 
 ## Preparacion
